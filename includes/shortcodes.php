@@ -148,7 +148,7 @@ function edr_sc_courses( $atts, $content = null ) {
 	include $template;
 	return ob_get_clean();
 }
-add_shortcode( 'courses', 'edr_sc_courses' );
+add_shortcode( 'cursos', 'edr_sc_courses' );
 
 /**
  * SHORTCODE: output the course prerequisites.
