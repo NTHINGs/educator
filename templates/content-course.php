@@ -12,18 +12,16 @@ $price_str = ( $price > 0 ) ? edr_format_price( $price ) : _x( 'Free', 'price', 
 $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 ?>
 <article id="course-<?php echo intval( $course_id ); ?>" class="col-12 col-sm-4 edr-course">
-	<?php if ( has_post_thumbnail() ) : ?>
-		<div class="edr-course__image">
-			<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( $thumb_size ); ?></a>
+	<a href="<?php the_permalink(); ?>">
+		<div class="card">
+			<?php if ( has_post_thumbnail() ) : ?>
+				<?php the_post_thumbnail( $thumb_size, [class => "card-img-top"]); ?>
+			<?php endif; ?>
+			<div class="card-body">
+				<h5 class="card-title"><?php the_title(); ?></h5>
+				<p class="card-text"><?php the_excerpt(); ?></p>
+				<p class="float-right"><?php echo $price_str; ?></p>
+			</div>
 		</div>
-	<?php endif; ?>
-
-	<header class="edr-course__header">
-		<h2 class="edr-course__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		<div class="edr-course__price"><?php echo $price_str; ?></div>
-	</header>
-
-	<div class="edr-course__summary">
-		<?php the_excerpt(); ?>
-	</div>
+	</a>
 </article>
