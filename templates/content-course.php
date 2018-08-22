@@ -20,15 +20,18 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 				echo '<img class="img-fluid wp-post-image card-img-top" src="http://placehold.jp/350x200.png">';
 				// echo '<img class="img-fluid wp-post-image card-img-top" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
 			endif; ?>
-			<div class="card-body">
+			<div class="card-body text-justify">
 				<h5 class="card-title"><?php the_title(); ?></h5>
-				<p class="card-text"><?php the_excerpt(); ?></p>
-				<p class="float-right">
+				<?php the_excerpt(); ?>
+				
+			</div>
+			<div class="card-footer">
+				<h5 class="float-right">
 					<?php
 						echo _x( 'Price: ', 'Price str', 'novolearn' );
 						echo $price_str; 
 					?>
-				</p>
+				</h5>
 			</div>
 		</div>
 	</a>
