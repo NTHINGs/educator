@@ -213,6 +213,7 @@ class Edr_Main {
 	public function enqueue_scripts_styles() {
 		if ( apply_filters( 'edr_stylesheet', true ) ) {
 			wp_enqueue_style( 'edr-base', EDR_PLUGIN_URL . 'assets/public/css/base.css', array(), '2.0.3' );
+			wp_enqueue_style( 'bootstrap_css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap-grid.min.css' );
 		}
 
 		if ( edr_is_page( 'payment' ) ) {

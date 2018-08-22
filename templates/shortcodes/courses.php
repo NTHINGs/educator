@@ -14,12 +14,16 @@
 		) );
 	?>
 	<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
-		<?php
-			while ( $courses->have_posts() ) {
-				$courses->the_post();
-				Edr_View::template_part( 'content', 'course' );
-			}
-		?>
+		<div class="container-fluid">
+			<div class="row">
+				<?php
+					while ( $courses->have_posts() ) {
+						$courses->the_post();
+						Edr_View::template_part( 'content', 'course' );
+					}
+				?>
+			</div>
+		</div>
 	</div>
 
 	<?php
