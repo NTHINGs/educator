@@ -15,12 +15,17 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 	<a href="<?php the_permalink(); ?>">
 		<div class="card">
 			<?php if ( has_post_thumbnail() ) :
-					the_post_thumbnail( $thumb_size);
+					the_post_thumbnail('full');
 			endif; ?>
 			<div class="card-body">
 				<h5 class="card-title"><?php the_title(); ?></h5>
 				<p class="card-text"><?php the_excerpt(); ?></p>
-				<p class="float-right"><?php echo $price_str; ?></p>
+				<p class="float-right">
+					<?php
+						echo _x( 'Precio:', 'Price str', 'novolearn' );
+						echo $price_str; 
+					?>
+				</p>
 			</div>
 		</div>
 	</a>
