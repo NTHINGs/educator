@@ -13,15 +13,15 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 ?>
 <article id="course-<?php echo intval( $course_id ); ?>" class="col-12 col-sm-4 edr-course">
 	<a href="<?php the_permalink(); ?>">
-		<div class="card">
-			<div class="card-img-top text-center" style="height:50%;">
+		<div class="card h-100">
+			<div class="card-img-top text-center h-50">
 				<?php if ( has_post_thumbnail() ) :
 					the_post_thumbnail('full' , array('class' => 'img-fluid'));
 				else:
-					echo '<img style="width:100%;height:auto;" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
+					echo '<img class="img-fluid wp-post-image" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
 				endif; ?>
 			</div>
-			<div class="card-body">
+			<div class="card-body h-50">
 				<h5 class="card-title"><?php the_title(); ?></h5>
 				<p class="card-text"><?php the_excerpt(); ?></p>
 				<p class="float-right">
