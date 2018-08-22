@@ -14,11 +14,13 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 <article id="course-<?php echo intval( $course_id ); ?>" class="col-12 col-sm-4 edr-course">
 	<a href="<?php the_permalink(); ?>">
 		<div class="card">
-			<?php if ( has_post_thumbnail() ) :
-				the_post_thumbnail('full', array('class' => 'card-img-top'));
-			else:
-				echo '<img class="card-img-top" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
-			endif; ?>
+			<div class="card-img-top" style="height=300px;">
+				<?php if ( has_post_thumbnail() ) :
+					the_post_thumbnail('full');
+				else:
+					echo '<img src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
+				endif; ?>
+			</div>
 			<div class="card-body">
 				<h5 class="card-title"><?php the_title(); ?></h5>
 				<p class="card-text"><?php the_excerpt(); ?></p>
