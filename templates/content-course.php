@@ -15,7 +15,7 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 	<a href="<?php the_permalink(); ?>">
 		<div class="card">
 			<?php if ( has_post_thumbnail() ) :
-				the_post_thumbnail('medium', array('class' => 'card-img-top'));
+				the_post_thumbnail('full', array('class' => 'card-img-top'));
 			else:
 				echo '<img class="card-img-top" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
 			endif; ?>
