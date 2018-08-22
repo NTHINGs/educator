@@ -17,7 +17,8 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 			<?php if ( has_post_thumbnail() ) :
 				the_post_thumbnail('large' , array('class' => 'img-fluid card-img-top'));
 			else:
-				echo '<img class="img-fluid wp-post-image card-img-top" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
+				echo '<img class="img-fluid wp-post-image card-img-top" src="http://placehold.jp/350x200.png">';
+				// echo '<img class="img-fluid wp-post-image card-img-top" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
 			endif; ?>
 			<div class="card-body">
 				<h5 class="card-title"><?php the_title(); ?></h5>
