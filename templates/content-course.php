@@ -18,7 +18,7 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 				<?php if ( has_post_thumbnail() ) :
 					the_post_thumbnail('full' , array('class' => 'img-fluid'));
 				else:
-					echo '<img class="img-fluid" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
+					echo '<img style="width:100%;height:auto;" src="/wp-content/plugins/educator/assets/public/img/default-thumbnail.jpg">';
 				endif; ?>
 			</div>
 			<div class="card-body">
