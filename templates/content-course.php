@@ -26,7 +26,7 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 				
 			</div>
 			<div class="card-footer">
-				<h5 class="float-right">
+				<h5 class="float-right" style="color: #464fa0;">
 					<?php
 						echo _x( 'Price: ', 'Price str', 'novolearn' );
 						echo $price_str; 
