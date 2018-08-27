@@ -8,7 +8,7 @@
 $edr_courses = Edr_Courses::get_instance();
 $course_id = get_the_ID();
 $price = $edr_courses->get_course_price( $course_id );
-$price_str = ( $price > 0 ) ? edr_format_price( $price ) : _x( 'Free', 'price', 'novolearn' );
+$price_str = ( $price > 0 ) ? edr_format_price( $price ) : _x( 'Gratis', 'price', 'novolearn' );
 $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 ?>
 <article id="course-<?php echo intval( $course_id ); ?>" class="col-12 col-sm-6 col-md-4 edr-course">
@@ -28,7 +28,7 @@ $thumb_size = apply_filters( 'edr_courses_thumb_size', 'thumbnail' );
 			<div class="card-footer">
 				<h5 class="float-right" style="color: #464fa0;">
 					<?php
-						echo _x( 'Price: ', 'Price str', 'novolearn' );
+						echo _x( 'Precio: ', 'Price str', 'novolearn' );
 						echo $price_str; 
 					?>
 				</h5>
